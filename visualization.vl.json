@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {
-    "text": "USA Inflation",
-    "subtitle": "CPI, yearly change. Source : FRED"
+    "text": "Unemployment Rate for College Graduates",
+    "subtitle": "Bachelor Degree Holders, Age 25-34. Source : FRED"
   },
   "data": {
     "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/Unemployment_Chart%20-%20Unemployment_Chart.csv.csv"

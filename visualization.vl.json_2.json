@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Health Expenditures per Capita",
+    "subtitle": "Percentage Change from Previous Year. Source : FRED"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/HLTHSCPCHCSA_PC1%20-%20HLTHSCPCHCSA_PC1.csv.csv"
+  },
+  "width": 600,
+  "height": 400,
+  "mark": {"type": "line", "color": "#dc1e4d"},
+  "encoding": {
+    "x": {
+      "field": "Data",
+      "type": "temporal",
+      "axis": {"title": "", "grid": false}
+    },
+    "y": {"field": "Value", "type": "quantitative"}
+  },
+  "config": {}
+}

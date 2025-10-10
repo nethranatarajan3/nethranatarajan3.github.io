@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "USA Inflation",
+    "subtitle": "CPI, yearly change. Source : FRED"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/Unemployment_Chart%20-%20Unemployment_Chart.csv.csv"
+  },
+  "mark": {"type": "line", "color": "#800020"},
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "axis": {"title": "", "grid": false}
+    },
+    "y": {"field": "Value", "type": "quantitative"}
+  },
+  "config": {}
+}

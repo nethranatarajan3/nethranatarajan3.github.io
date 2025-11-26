@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
   "title": {
-    "text": "Unemployment Rate for College Graduates",
+    "text": "Unemployment Rate for College Graduates (United States)",
     "subtitle": "Bachelor Degree Holders, Age 25-34. Source : FRED"
   },
   "data": {

@@ -7,6 +7,8 @@
   "data": {
     "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/Unemployment_Chart%20-%20Unemployment_Chart.csv.csv"
   },
+  "width": 600,
+  "height": 400,
   "mark": {"type": "line", "color": "#800020"},
   "encoding": {
     "x": {

@@ -36,9 +36,17 @@ h2 {
 p {
   margin-bottom: 1em;
   font-weight: 300;
+  text-align: center;
 }
 section {
   margin-bottom: 2.5em;  /* We want a little more space between sections */
+  text-align: center;
+}
+/* Center the charts */
+figure {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Links */
 /* We want the links to be a little more visible  and a different color */

@@ -12,6 +12,7 @@ body { /* We can style any HTML element by using its name - here we're styling t
   margin:0 auto;
   max-width: 800px;
   padding-top: 60px;
+  text-align: center; /* Center align all content */
 }
 /* Headings */
 h1, h2, h3, h4, h5, h6 {

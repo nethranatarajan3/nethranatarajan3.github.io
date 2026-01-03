@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Similar Wealth, Different Health Outcomes",
+    "subtitle": [
+      "Plotting IMR against Statewise Per Capita GDP (2022), with bubble size representing population size and coloured bubbles representing case study states",
+      "Source: Census of India SRS Bulletin (2022) for IMR; Open Government Data Portal for GDP (2022); Census for Population (2011)"
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 11,
+    "subtitleFontStyle": "italic"
+  },
+  "width": 600,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/data/Aggregated_Data.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.State == 'Kerala' ? 'Kerala' : datum.State == 'Tamilnadu' ? 'Tamilnadu' : datum.State == 'Gujarat' ? 'Gujarat' : datum.State == 'Haryana' ? 'Haryana' : 'Other States'",
+      "as": "State_Group"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "circle", "opacity": 0.8},
+      "encoding": {
+        "x": {
+          "field": "Per Capita GSDP - 2022-23",
+          "type": "quantitative",
+          "title": "GDP per Capita (INR)",
+          "scale": {"zero": false}
+        },
+        "y": {
+          "field": "IMR (2022)",
+          "type": "quantitative",
+          "title": "Infant Mortality Rate (per 1,000 births)",
+          "scale": {"zero": false}
+        },
+        "size": {
+          "field": "Population (2011)",
+          "type": "quantitative",
+          "title": "Population",
+          "scale": {"range": [100, 2000]},
+          "legend": {"offset": 30, "orient": "right"}
+        },
+        "color": {
+          "field": "State_Group",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Kerala",
+              "Tamilnadu",
+              "Gujarat",
+              "Haryana",
+              "Other States"
+            ],
+            "range": ["#023020", "#50C878", "#880808", "#EE4B2B", "#bdc3c7"]
+          },
+          "legend": {"title": "States", "orient": "right"}
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal"},
+          {
+            "field": "Per Capita GSDP - 2022-23",
+            "type": "quantitative",
+            "title": "GDP per Capita",
+            "format": ",.0f"
+          },
+          {"field": "IMR (2022)", "type": "quantitative", "title": "IMR"},
+          {
+            "field": "Population (2011)",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "red",
+        "strokeWidth": 3,
+        "strokeDash": [5, 5]
+      },
+      "transform": [
+        {
+          "regression": "IMR (2022)",
+          "on": "Per Capita GSDP - 2022-23",
+          "extent": [50000, 650000]
+        }
+      ],
+      "encoding": {
+        "x": {"field": "Per Capita GSDP - 2022-23", "type": "quantitative"},
+        "y": {"field": "IMR (2022)", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {}
+}

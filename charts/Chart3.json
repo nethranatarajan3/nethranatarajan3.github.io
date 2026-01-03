@@ -1,0 +1,88 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Healthcare Quality Indicators: Evolution Over Time",
+    "subtitle": [
+      "ANC Full Protocol : Mothers who had at least 4 antenatal care visits; Full Immunization: Children receiving all basic vaccines (BCG, measles, polio, DPT)",
+      "Institutional Births: Births in healthcare facilities vs. home births; Low Diarrhea: Inverted diarrhea prevalence (higher = healthier children)",
+      "Source: NFHS Rounds 3, 4, 5 (2005-2021)",
+      "Toggle to see how quality has changed"
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 11,
+    "subtitleFontStyle": "italic"
+  },
+  "width": 650,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/data/Quality_Data.csv"
+  },
+  "params": [
+    {
+      "name": "yearSelect",
+      "value": "2019-21",
+      "bind": {
+        "input": "select",
+        "options": ["2019-21", "2015-16", "2005-06"],
+        "labels": ["NFHS-5 (2019-21)", "NFHS-4 (2015-16)", "NFHS-3 (2005-06)"],
+        "name": "Survey Period: "
+      }
+    }
+  ],
+  "transform": [
+    {"calculate": "trim(datum.State)", "as": "State_Clean"},
+    {
+      "calculate": "yearSelect == '2019-21' ? [datum['ANC Full Protocol (2019-21)'], datum['% Institutional Births (2019-21)'], datum['Prevelance of Diarrhoea (2019-21)'], datum['% Children (12-23 months) Fully Immunised (2019-21)']] : yearSelect == '2015-16' ? [datum['ANC Full Protocol (2015-16)'], datum['% Institutional Births (2015-16)'], datum['Prevelance of Diarrhoea (2015-16)'], null] : [datum['ANC Full Protocol (2005-06)'], datum['% Institutional Births (2005-06)'], datum['Prevelance of Diarrhoea (2005-06)'], null]",
+      "as": "Values_Array"
+    },
+    {
+      "calculate": "yearSelect == '2019-21' ? ['ANC Full Protocol', 'Institutional Births', 'Low Diarrhea (inverted)', 'Full Immunization'] : ['ANC Full Protocol', 'Institutional Births', 'Low Diarrhea (inverted)']",
+      "as": "Indicators_Array"
+    },
+    {
+      "flatten": ["Values_Array", "Indicators_Array"],
+      "as": ["Value", "Indicator"]
+    },
+    {"filter": "datum.Value != null"},
+    {
+      "calculate": "datum.Indicator == 'Low Diarrhea (inverted)' ? 100 - datum.Value : datum.Value",
+      "as": "Value_Adjusted"
+    }
+  ],
+  "mark": {"type": "bar", "opacity": 0.9},
+  "encoding": {
+    "x": {
+      "field": "Indicator",
+      "type": "nominal",
+      "title": null,
+      "axis": {"labelAngle": -30, "labelAlign": "right", "labelFontSize": 11}
+    },
+    "y": {
+      "field": "Value_Adjusted",
+      "type": "quantitative",
+      "title": "Percentage (%)",
+      "scale": {"domain": [0, 100]}
+    },
+    "xOffset": {"field": "State_Clean"},
+    "color": {
+      "field": "State_Clean",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Kerala", "Tamilnadu", "Gujarat", "Haryana"],
+        "range": ["#023020", "#50C878", "#880808", "#EE4B2B"]
+      },
+      "legend": {"title": "State", "orient": "top"}
+    },
+    "tooltip": [
+      {"field": "State_Clean", "type": "nominal", "title": "State"},
+      {"field": "Indicator", "type": "nominal"},
+      {
+        "field": "Value_Adjusted",
+        "type": "quantitative",
+        "title": "Value (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {}
+}

@@ -1,0 +1,130 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Investment vs. Impact: State Trajectories (2014→2022)",
+    "subtitle": [
+      "Connected points show progression over time; Numbers in the circles indicate years from 2014-2022",
+      "Source: National Health Accounts (2014-2022) for Government expenditure; Census of India SRS Bulletin for IMR"
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 11,
+    "subtitleFontStyle": "italic"
+  },
+  "width": 700,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/data/Expenditure%20vs%20IMR.csv"
+  },
+  "transform": [
+    {"calculate": "trim(datum.State)", "as": "State_Clean"},
+    {
+      "filter": "datum.State_Clean == 'Kerala' || datum.State_Clean == 'Tamilnadu' || datum.State_Clean == 'Tamil Nadu' || datum.State_Clean == 'Gujarat' || datum.State_Clean == 'Haryana'"
+    },
+    {
+      "fold": [
+        "IMR (2014)",
+        "IMR (2015) ",
+        "IMR (2016) ",
+        "IMR (2017) ",
+        "IMR (2018)",
+        "IMR (2019)",
+        "IMR (2020) ",
+        "IMR (2021) ",
+        "IMR (2022)"
+      ],
+      "as": ["IMR_Col", "IMR"]
+    },
+    {
+      "calculate": "replace(replace(trim(datum.IMR_Col), 'IMR (', ''), ')', '')",
+      "as": "Year"
+    },
+    {
+      "calculate": "datum.Year == '2014' ? datum['Statewise Per Capita Healthcare Expenditure (2014)'] : datum.Year == '2015' ? datum['Statewise Per Capita Healthcare Expenditure (2015)'] : datum.Year == '2016' ? datum['Statewise Per Capita Healthcare Expenditure (2016)'] : datum.Year == '2017' ? datum['Statewise Per Capita Healthcare Expenditure (2017)'] : datum.Year == '2018' ? datum['Statewise Per Capita Healthcare Expenditure (2018)'] : datum.Year == '2019' ? datum['Statewise Per Capita Healthcare Expenditure (2019)'] : datum.Year == '2020' ? datum['Statewise Per Capita Healthcare Expenditure (2020)'] : datum.Year == '2021' ? datum['Statewise Per Capita Healthcare Expenditure (2021)'] : datum['Statewise Per Capita Healthcare Expenditure (2022)']",
+      "as": "Expenditure"
+    },
+    {"filter": "isValid(datum.Expenditure) && isValid(datum.IMR)"},
+    {"calculate": "substring(datum.Year, 2, 4)", "as": "Year_Short"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 3, "point": false},
+      "encoding": {
+        "x": {
+          "field": "Expenditure",
+          "type": "quantitative",
+          "title": "Per Capita Government Health Expenditure (₹)",
+          "axis": {"format": ",.0f"}
+        },
+        "y": {
+          "field": "IMR",
+          "type": "quantitative",
+          "title": "Infant Mortality Rate (per 1,000 births)",
+          "scale": {"zero": true}
+        },
+        "color": {
+          "field": "State_Clean",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Kerala", "Tamilnadu", "Gujarat", "Haryana"],
+            "range": ["#097969", "#50C878", "#880808", "#EE4B2B"]
+          },
+          "legend": {"title": "State", "orient": "top"}
+        },
+        "detail": {"field": "State_Clean"},
+        "order": {"field": "Year", "type": "ordinal"},
+        "opacity": {"value": 0.8}
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 400,
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {"field": "Expenditure", "type": "quantitative"},
+        "y": {"field": "IMR", "type": "quantitative"},
+        "color": {
+          "field": "State_Clean",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Kerala", "Tamilnadu", "Gujarat", "Haryana"],
+            "range": ["#097969", "#50C878", "#880808", "#EE4B2B"]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "State_Clean", "type": "nominal", "title": "State"},
+          {"field": "Year", "type": "nominal", "title": "Year"},
+          {
+            "field": "Expenditure",
+            "type": "quantitative",
+            "title": "Expenditure (₹)",
+            "format": ",.0f"
+          },
+          {
+            "field": "IMR",
+            "type": "quantitative",
+            "title": "IMR",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "bold",
+        "color": "white"
+      },
+      "encoding": {
+        "x": {"field": "Expenditure", "type": "quantitative"},
+        "y": {"field": "IMR", "type": "quantitative"},
+        "text": {"field": "Year_Short", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {}
+}

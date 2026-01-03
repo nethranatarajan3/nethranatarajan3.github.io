@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "A Visual Representation of 'Two Indias'",
+    "subtitle": [
+      "Geographical clustering of states based on health system indicators"
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 11,
+    "subtitleFontStyle": "italic",
+    "offset": 20
+  },
+  "width": 700,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/main/Admin_Boundary.json",
+    "format": {"type": "json", "property": "features"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.State_Name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/main/data/cluster_assignments.csv"
+        },
+        "key": "State",
+        "fields": ["Cluster"]
+      },
+      "default": null
+    },
+    {
+      "calculate": "datum.Cluster == null ? 'Not in Cluster (Union Territory)' : datum.Cluster == 0 ? 'Cluster 1: Low Performing States' : datum.Cluster == 1 ? 'Cluster 2: High Performing States' : 'Cluster 3: Struggling States'",
+      "as": "Cluster_Label"
+    }
+  ],
+  "projection": {"type": "identity", "reflectY": true},
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1.5},
+  "encoding": {
+    "color": {
+      "field": "Cluster_Label",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Cluster 1: Low Performing States",
+          "Cluster 2: High Performing States",
+          "Cluster 3: Struggling States",
+          "Not in Cluster (Union Territory)"
+        ],
+        "range": ["#f39c12", "#27ae60", "#e74c3c", "#d3d3d3"]
+      },
+      "legend": {
+        "title": "Health System Classification",
+        "orient": "bottom-left"
+      }
+    },
+    "tooltip": [
+      {"field": "properties.State_Name", "type": "nominal", "title": "State"},
+      {"field": "Cluster_Label", "type": "nominal", "title": "Cluster"}
+    ]
+  },
+  "config": {}
+}

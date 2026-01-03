@@ -1,0 +1,144 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Health System Inputs and their Correlation with IMR",
+    "subtitle": [
+      "Toggle between statewise medical infrastructure, Government spending, and medical education metrics",
+      "PHC Density represents Primary Healthcare Centres per 100,000 ",
+      "Source: Open Government Data Portal, National Health Accounts (2022)"
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 11,
+    "subtitleFontStyle": "italic"
+  },
+  "width": 600,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/data/Aggregated_Data.csv"
+  },
+  "params": [
+    {
+      "name": "xVariable",
+      "value": "PHC Density per 100,000",
+      "bind": {
+        "input": "select",
+        "options": [
+          "PHC Density per 100,000",
+          "Statewise Per Capita Healthcare Expenditure",
+          "Per Capita Health Expenditure as %GDP",
+          "Number of Medical Colleges per 1 million"
+        ],
+        "labels": [
+          "Infrastructure: PHC Density",
+          "Government Expenditure: Per Capita (₹)",
+          "Government Expenditure: % of State GDP",
+          "Medical Education: Colleges per Million"
+        ],
+        "name": "X-Axis Variable: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.State == 'Kerala' ? 'Kerala' : datum.State == 'Tamilnadu' ? 'Tamilnadu' : datum.State == 'Gujarat' ? 'Gujarat' : datum.State == 'Haryana' ? 'Haryana' : 'Other States'",
+      "as": "State_Group"
+    },
+    {
+      "calculate": "xVariable == 'PHC Density per 100,000' ? datum['PHC Density per 100,000'] : xVariable == 'Statewise Per Capita Healthcare Expenditure' ? datum['Statewise Per Capita Healthcare Expenditure'] : xVariable == 'Per Capita Health Expenditure as %GDP' ? datum['Per Capita Health Expenditure as %GDP'] : datum['Number of Medical Colleges per 1 million']",
+      "as": "X_Value"
+    },
+    {
+      "calculate": "xVariable == 'PHC Density per 100,000' ? 'PHC Density (per 100,000 population)' : xVariable == 'Statewise Per Capita Healthcare Expenditure' ? 'Per Capita Health Expenditure (₹)' : xVariable == 'Per Capita Health Expenditure as %GDP' ? 'Health Expenditure (% of State GDP)' : 'Medical Colleges (per 1 million population)'",
+      "as": "X_Label"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "circle", "opacity": 0.8},
+      "encoding": {
+        "x": {
+          "field": "X_Value",
+          "type": "quantitative",
+          "title": {"expr": "datum.X_Label"},
+          "scale": {"zero": false}
+        },
+        "y": {
+          "field": "IMR (2022)",
+          "type": "quantitative",
+          "title": "Infant Mortality Rate (per 1,000 births)",
+          "scale": {"zero": false}
+        },
+        "size": {
+          "field": "Population (2011)",
+          "type": "quantitative",
+          "title": "Population",
+          "scale": {"range": [100, 2000]},
+          "legend": {"offset": 30, "orient": "right"}
+        },
+        "color": {
+          "field": "State_Group",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Kerala",
+              "Tamilnadu",
+              "Gujarat",
+              "Haryana",
+              "Other States"
+            ],
+            "range": ["#023020", "#50C878", "#880808", "#EE4B2B", "#bdc3c7"]
+          },
+          "legend": {"title": "States", "orient": "right"}
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal"},
+          {
+            "field": "PHC Density per 100,000",
+            "type": "quantitative",
+            "title": "PHC Density",
+            "format": ".2f"
+          },
+          {
+            "field": "Statewise Per Capita Healthcare Expenditure",
+            "type": "quantitative",
+            "title": "Per Capita Expenditure (₹)",
+            "format": ",.0f"
+          },
+          {
+            "field": "Per Capita Health Expenditure as %GDP",
+            "type": "quantitative",
+            "title": "Expenditure (% GDP)",
+            "format": ".2f"
+          },
+          {
+            "field": "Number of Medical Colleges per 1 million",
+            "type": "quantitative",
+            "title": "Med Colleges per Million",
+            "format": ".2f"
+          },
+          {"field": "IMR (2022)", "type": "quantitative", "title": "IMR"},
+          {
+            "field": "Population (2011)",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "red",
+        "strokeWidth": 3,
+        "strokeDash": [5, 5]
+      },
+      "transform": [{"regression": "IMR (2022)", "on": "X_Value"}],
+      "encoding": {
+        "x": {"field": "X_Value", "type": "quantitative"},
+        "y": {"field": "IMR (2022)", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {}
+}

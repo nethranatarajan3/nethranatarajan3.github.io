@@ -1,4 +1,4 @@
-Sl. No.,State,Per Capita GSDP - 2021-22,Per Capita GSDP - 2022-23,IMR (2012),IMR (2013) ,IMR (2014),IMR (2015) ,IMR (2016) ,IMR (2017) ,IMR (2018),IMR (2019),IMR (2020) ,IMR (2021) ,IMR (2022),Population (2011),% Women Literate (Ages 15-49),% Institutional Births ,ANC Full Protocol,Prevalence of diarrhoea in the 2 weeks preceding the survey (Children under age 5 years) (%) ,% Children (12-23 months) Fully Immunised ,Number of PHCs,"PHC Density per 100,000",Statewise Per Capita Healthcare Expenditure,Per Capita Health Expenditure as %GDP,Number of Medical Colleges ,"Number of Medical Colleges per 100,000"
+Sl. No.,State,Per Capita GSDP - 2021-22,Per Capita GSDP - 2022-23,IMR (2012),IMR (2013) ,IMR (2014),IMR (2015) ,IMR (2016) ,IMR (2017) ,IMR (2018),IMR (2019),IMR (2020) ,IMR (2021) ,IMR (2022),Population (2011),% Women Literate (Ages 15-49),% Institutional Births ,ANC Full Protocol,Prevalence of diarrhoea in the 2 weeks preceding the survey (Children under age 5 years) (%) ,% Children (12-23 months) Fully Immunised ,Number of PHCs,"PHC Density per 100,000",Statewise Per Capita Healthcare Expenditure,Per Capita Health Expenditure as %GDP,Number of Medical Colleges ,"Number of Medical Colleges per 1,000,000"
 1,Andhra Pradesh,219799,245582,41,39,39,37,34,32,29,25,24,22,20,49577103,68.6,96.5,67.5,7.2,88.0,1689,3.406814634,3129,1.423573356,38,0.7664828661
 2,Arunachal Pradesh,212372,225770,33,32,,30,36,,,29,21,21,19,1383727,73.8 ,79.2 ,36.5 ,5.1 ,76.4 ,131,9.467185362,7825,3.684572354,1,0.7226859055
 3,Assam,116554,134591,55,54,49,47,44,44,41,40,36,34,32,31205576,77.2 ,84.1 ,50.7 ,5.5 ,71.8 ,1010,3.236601048,2753,2.361995298,15,0.480683324
@@ -28,4 +28,5 @@ Sl. No.,State,Per Capita GSDP - 2021-22,Per Capita GSDP - 2022-23,IMR (2012),IMR
 27,Uttar Pradesh,85293,97323,53,50,48,46,43,41,43,41,38,37,38,199812341,81.6 ,83.2 ,61.8 ,4.4 ,88.6 ,3513,1.758149663,1497,1.755126446,85,0.4253991499
 
 28,West Bengal,135080,154905,32,31,28,26,25,24,22,20,19,18,17,91276115,76.1 ,91.7 ,75.8 ,6.5 ,90.8 ,1371,1.502035883,2454,1.816701214,40,0.4382307463
+
 

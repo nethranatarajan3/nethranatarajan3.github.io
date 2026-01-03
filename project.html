@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <title>Health Disparities in India - Data Visualization Project</title>
+
+    <!-- Vega-Lite libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        .chart-grid {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .chart-full {
+            width: 100%;
+        }
+        .chart-half {
+            flex: 1;
+        }
+        .python-chart {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="big" style="margin-bottom: 0px;">
+        Health Disparities in India: A "Two Indias" Analysis
+    </h1>
+    <p style="margin-top: 0px; color: darkblue">
+        LSE | PP434: Automated Data Visualization for Public Policy
+    </p>
+
+    <!-- INTRODUCTION SECTION -->
+    <section>
+        <h2>Introduction</h2>
+        <p>
+            This project examines the "Two Indias" hypothesis, which states that India's healthcare system operates as two distinct entities with Southern states delivering higher-quality care at lower costs than their Northern counterparts. Drawing on research by Das et al. (2016), which found informal providers in Tamilnadu possessed more medical knowledge than qualified doctors in Bihar, this analysis investigates whether distinct geographic clustering exists in health outcomes and identifies factors explaining these disparities.
+        </p>
+        <p>
+            The analysis focuses on four comparable case study states: Kerala and Tamilnadu (South) versus Gujarat and Haryana (North). These pairs have similar GDP per capita and population sizes, yet demonstrate markedly different health outcomes. Data sources include the Open Government Data Portal of India, National Health Accounts from the National Health Systems Resource Centre (NHSRC), and the National Family Health Survey (NFHS), a large-scale, multi-round demographic and health survey providing state-level indicators on population, health. All current metrics use 2022 data (most recent).
+
+    </section>
+
+    <!-- CHART 1: CHOROPLETH MAP -->
+    <section>
+        <div class="chart-description">
+            <h2>Chart 1: Geographic Distribution of Infant Mortality</h2>
+            <p>
+                The choropleth map displays state-wise Infant Mortality Rates (IMR) for 2022, sourced from the Census of India's Sample Registration System (SRS) Bulletin, which provides annual health statistics estimates. Indian administrative boundaries were obtained from a publicly accessible repository and converted to GeoJSON format via QGIS, as direct access from Survey of India's official portal required lengthy approval processes.
+            </p>
+            <p>
+                The map reveals clear geographic patterns: low-IMR states concentrate in the South, while higher rates cluster in Central, Northern, and Eastern regions. Some Northeastern and Himalayan states also perform well, likely due to smaller populations, stronger social infrastructure, and targeted central government programs for these regions. Notably, India's federal structure grants states primary responsibility for health governance, with the central government providing policy frameworks and partial funding. This state-level autonomy makes cross-state comparisons particularly meaningful, making the focus of this project major states rather than smaller union territories, which have different administrative structures and resource allocations.
+
+            </p>
+        </div>
+        <figure id="chart1" class="chart-full"></figure>
+    </section>
+
+    <!-- CHART 2: GDP VS IMR -->
+    <section>
+        <div class="chart-description">
+            <h2>Chart 2: GDP and Health—The Incomplete Story</h2>
+            <p>
+                The second visualization challenges the assumption that wealth automatically yields better health. While overall correlation exists between GDP per capita and IMR, significant outliers emerge. Gujarat, with nearly identical GDP to Tamilnadu and exceeding Kerala's, records IMR of 26, versus 16 and 7 for Tamilnadu and Kerala respectively. Haryana performs even worse (IMR: 26) despite higher per capita income than both Southern states. The x-axis begins at ₹50,000 since all states exceed this threshold, eliminating empty chart space while preserving visual clarity for meaningful comparisons.
+            </p>
+        </div>
+        <figure id="chart2" class="chart-full"></figure>
+    </section>
+
+    <!-- CHART 3: FEMALE LITERACY -->
+    <section>
+        <div class="chart-description">
+            <h2>Chart 3: Female Literacy—A Stronger Predictor</h2>
+            <p>
+                Female literacy demonstrates stronger correlation with child survival than GDP. Women's education influences maternal nutrition, healthcare-seeking behavior, birth spacing, and child-rearing practices, creating multiplier effects on family health. Kerala and Tamilnadu's high female literacy rates (98.3% and 85.9%) correspond with their low IMRs, while Gujarat and Haryana's lower rates (76.5% and 81.7%) associate with poorer outcomes. Notably, Gujarat performs better than Northern states with comparable literacy levels, suggesting additional factors at play. The x-axis starts at 50% as all states exceed this baseline, focusing attention on inter-state variation.
+
+            </p>
+        </div>
+        <figure id="chart3" class="chart-full"></figure>
+    </section>
+
+    <!-- CHART 4: HEALTH INPUTS TOGGLE -->
+    <section>
+        <div class="chart-description">
+            <h2>Chart 4: Health System Inputs—Quantity Versus Quality</h2>
+            <p>
+                An interactive toggle visualization examines four inputs against IMR: Primary Health Centre (PHC) density (India's foundational public healthcare units providing basic services); per capita government health expenditure; expenditure as percentage of state GDP; and medical college density per million. Users can switch between these metrics to compare correlation strengths.
+            </p>
+            <p>
+                PHC density shows weak correlation where Tamilnadu and Kerala achieve superior outcomes with lower facility density than Gujarat, suggesting efficiency differences in service delivery rather than mere infrastructure quantity. Government expenditure reveals Tamilnadu and Kerala spend moderately more, though Haryana's spending nearly matches Tamilnadu's despite worse outcomes. As GDP percentage, Southern states invest more proportionally, though differences remain modest. Medical college density, reflecting Das et al.'s emphasis on medical education disparities, shows a strong correlation. Tamilnadu and Kerala have substantially higher concentrations than Gujarat and Haryana. Non-zero axis starting points across these metrics eliminate empty space, enhancing visual comparison of the variation, which is the primary aim of these graphs. 
+            </p>
+            <p>
+                Note : Number of Medical Colleges was scraped from Wikipedia using Colab code.
+            </p>
+            </div>
+        <figure id="chart4" class="chart-full"></figure>
+    </section>
+
+    <!-- CHART 5: TRAJECTORY -->
+    <section>
+        <div class="chart-description">
+            <h2>Chart 5: Investment vs. Impact Over Time</h2>
+            <p>
+                To track spending efficiency over time, the trajectory plots track IMR against government spending (2014-2022), with data from National Health Accounts. Gujarat demonstrates notable efficiency, reducing IMR from 35 to 26 while increasing per capita spending by ₹1,900. However, this dramatic improvement likely reflects catch-up from a poor baseline combined with the 2018 national Ayushman Bharat scheme (national level scheme providing health insurance to 500 million citizens) rather than solely state-level factors. Haryana showed similar initial decline but stagnated post-2019, possibly due to COVID-19 disruptions. Tamilnadu and Kerala's slower IMR reduction despite spending increases reflects their already-low baselines. Marginal gains become progressively harder when starting from higher positions.
+            </p>
+        </div>
+        <figure id="chart5" class="chart-full"></figure>
+    </section>
+
+    <!-- CHART 6: QUALITY INDICATORS TOGGLE -->
+    <section>
+        <div class="chart-description">
+            <h2>Chart 6: Quality Indicators Over Time</h2>
+            <p>
+                An interactive toggle displays quality metrics across NFHS rounds 3, 4, and 5 (2005-2021): antenatal care protocol adherence, institutional delivery rates, diarrhea prevalence (inverted for consistency), and full immunization coverage. Users can select survey rounds to observe temporal evolution.
+            </p>
+            <p>
+                Round 3 reveals substantial gaps in antenatal care and institutional deliveries between Northern and Southern states, though diarrhea prevalence shows less variation. Round 4 demonstrates convergence, particularly in institutional deliveries. Round 5 shows continued gap closure across all indicators, though Kerala and Tamilnadu maintain leads. Full immunization data appears only for Round 5.
+            </p>
+        </div>
+        <figure id="chart6" class="chart-full"></figure>
+    </section>
+
+    <!-- CHART 7: CLUSTERING - TWO PANELS -->
+    <section>
+        <div class="chart-description">
+            <h2>Chart 7: Machine Learning Validation of "Two Indias"</h2>
+            <p>
+                As a final test for the “Two Indias” theory, hierarchical clustering is employed using eight health system inputs and outputs (showcased in heatmap). States are grouped into three clusters: High Performers, Low Performers, and Struggling States. The geographic map visualization provides compelling evidence to the "Two Indias" hypothesis: high-performing clusters concentrate in the South, while low-performing and struggling clusters dominate the North and East.
+
+            </p>
+        </div>
+        
+        <!-- Two-panel layout for clustering -->
+        <div class="chart-grid">
+            <div class="chart-half">
+                <figure id="chart7_map"></figure>
+            </div>
+            <div class="chart-half">
+                <img src="charts/Chart7.png" alt="Cluster Heatmap" class="python-chart">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section>
+        <h2>Conclusion</h2>
+        <p>
+            Multiple factors explain North-South health disparities. Tamilnadu and Kerala represent regional party strongholds historically prioritizing welfare-oriented governance since independence. Conversely, Gujarat and recently, Haryana, have been Bharatiya Janata Party (BJP) strongholds, traditionally focused more on upper class and upper caste driven economic growth. Das et al.'s finding that Southern informal providers exceed Northern qualified doctors' competency underscores systemic quality differences transcending individual facilities or budgets.
+        </p>
+        <p>
+            This analysis reveals that health outcomes depend less on resource quantity than strategic deployment and historical commitment to social development. While correlations identified here cannot establish causation (given limited data points and India's unique context) they surface critical questions about efficiency, quality, and equity in health systems that merit deeper investigation.
+        </p>
+    </section>
+
+    
+
+    <!-- VEGA-LITE CHART EMBEDDINGS -->
+    <script>
+        // Chart specifications
+        let chart1_spec = "charts/Chart1.json";
+        let chart2_spec = "charts/Chart2.json";
+        let chart3_spec = "charts/Chart6.json";
+        let chart4_spec = "charts/Chart5.json";
+        let chart5_spec = "charts/Chart4.json";
+        let chart6_spec = "charts/Chart3.json";
+        let chart7_map_spec = "charts/Chart8.json";
+
+        // Embed all charts
+        vegaEmbed('#chart1', chart1_spec);
+        vegaEmbed('#chart2', chart2_spec);
+        vegaEmbed('#chart3', chart3_spec);
+        vegaEmbed('#chart4', chart4_spec);
+        vegaEmbed('#chart5', chart5_spec);
+        vegaEmbed('#chart6', chart6_spec);
+        vegaEmbed('#chart7_map', chart7_map_spec);
+    </script>
+
+</body>
+
+</html>

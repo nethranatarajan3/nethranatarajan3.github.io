@@ -55,7 +55,7 @@
       "field": "Indicator",
       "type": "nominal",
       "title": null,
-      "axis": {"labelAngle": -30, "labelAlign": "right", "labelFontSize": 11}
+      "axis": {"labelAngle": -30, "labelAlign": "right", "labelFontSize": 11, "labelFontWeight": "bold"}
     },
     "y": {
       "field": "Value_Adjusted",

@@ -7,8 +7,9 @@
       "Source: Census of India SRS Bulletin (2022) for IMR; Open Government Data Portal for GDP (2022); Census for Population (2011)"
     ],
     "fontSize": 18,
-    "subtitleFontSize": 11,
-    "subtitleFontStyle": "italic"
+    "subtitleFontSize": 12,
+    "subtitleFontStyle": "italic",
+    "offset": 25
   },
   "width": 600,
   "height": 450,

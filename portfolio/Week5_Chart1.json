@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Supreme Court Appointments by Decade (1789-2020)",
+    "subtitle": "Source: Wikipedia - List of Supreme Court Justices",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "start"
+  },
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/main/portfolio_data/justices_by_decade.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {"type": "bar", "color": "#2c5aa0", "tooltip": true},
+  "encoding": {
+    "x": {
+      "field": "decade",
+      "type": "ordinal",
+      "title": "Decade",
+      "axis": {"labelAngle": -45, "labelFontSize": 11}
+    },
+    "y": {
+      "field": "num_justices",
+      "type": "quantitative",
+      "title": "Number of Justices Appointed",
+      "axis": {"grid": true}
+    },
+    "tooltip": [
+      {"field": "decade", "type": "ordinal", "title": "Decade"},
+      {"field": "num_justices", "type": "quantitative", "title": "Appointments"}
+    ]
+  },
+  "config": {}
+}

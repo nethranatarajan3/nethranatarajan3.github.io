@@ -1,0 +1,572 @@
+[
+    {
+        "page": 1,
+        "pages": 1,
+        "per_page": 1000,
+        "total": 35,
+        "sourceid": "2",
+        "lastupdated": "2025-12-19"
+    },
+    [
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2024",
+            "value": 0.104309021773304,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2023",
+            "value": 1.47503481053384,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2022",
+            "value": 0.941998775483285,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2021",
+            "value": 2.69657404187188,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2020",
+            "value": -4.16876457146743,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2019",
+            "value": -0.402169200894946,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2018",
+            "value": 0.643391023533141,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2017",
+            "value": 1.67533175173359,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2016",
+            "value": 0.753826745789127,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2015",
+            "value": 1.56062669680782,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2014",
+            "value": 0.296205514141889,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2013",
+            "value": 2.00510017681211,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2012",
+            "value": 1.37475099905274,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2011",
+            "value": 0.0238095237995424,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2010",
+            "value": 4.09791791943181,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2009",
+            "value": -5.69323635892741,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2008",
+            "value": -1.22428900061713,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2007",
+            "value": 1.48396941157472,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2006",
+            "value": 1.3723501275831,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2005",
+            "value": 1.80390087215821,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2004",
+            "value": 2.18611569439318,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2003",
+            "value": 1.53512549946694,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2002",
+            "value": 0.0419624992862282,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2001",
+            "value": 0.386103426142029,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "2000",
+            "value": 2.76464755136783,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1999",
+            "value": -0.333929957687772,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1998",
+            "value": -1.27033049466078,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1997",
+            "value": 0.981228732290873,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1996",
+            "value": 3.13387099272759,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1995",
+            "value": 2.6309996164206,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1994",
+            "value": 1.0833831743207,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1993",
+            "value": -0.459219716250544,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1992",
+            "value": 0.900586066438109,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1991",
+            "value": 3.52335723553459,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        },
+        {
+            "indicator": {
+                "id": "NY.GDP.MKTP.KD.ZG",
+                "value": "GDP growth (annual %)"
+            },
+            "country": {
+                "id": "JP",
+                "value": "Japan"
+            },
+            "countryiso3code": "JPN",
+            "date": "1990",
+            "value": 4.84092905699353,
+            "unit": "",
+            "obs_status": "",
+            "decimal": 1
+        }
+    ]
+]

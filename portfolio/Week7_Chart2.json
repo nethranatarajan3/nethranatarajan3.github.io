@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Railway Stations in Wales",
+    "subtitle": "Source: Public Github Repository of UK Railway Stations ",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 300,
+  "height": 400,
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_WLS_2025_05.topojson",
+        "format": {"type": "topojson", "feature": "object_name"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e8f5e9",
+        "stroke": "lightgray",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/davwheat/uk-railway-stations/main/stations.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [{"filter": "datum.constituentCountry == 'wales'"}],
+      "mark": {
+        "type": "circle",
+        "size": 80,
+        "color": "#d62728",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "longitude": {"field": "long", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "tooltip": [
+          {"field": "stationName", "type": "nominal", "title": "Station"},
+          {"field": "crsCode", "type": "nominal", "title": "CRS Code"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

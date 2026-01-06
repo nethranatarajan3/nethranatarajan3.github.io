@@ -256,6 +256,54 @@
     vegaEmbed('#Location12', figure_12_spec);
     vegaEmbed('#Location13', figure_13_spec);
 </script>
+
+    <section>
+    <div class="chart-description">
+        <h2 style="margin-top: 30px; text-align: center;">CC6: Building a Dashboard</h2>
+        <p style="text-align: center; max-width: 900px; margin: 10px auto;"> 
+            Used Python loops to batch download GDP growth data for six countries from World Bank API. Dashboard displays data using JavaScript loop for efficient embedding.
+            <br>
+            <a href="YOUR_COLAB_LINK_HERE" target="_blank" style="color: #2c5aa0; text-decoration: none; font-weight: bold;">→ View Python Notebook</a>
+        </p>
+    </div>
+    
+    <!-- Chart Grid (2 rows x 3 columns) -->
+    <div id="chartGrid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+        <!-- Charts will be inserted here by the JavaScript loop below -->
+    </div>
+</section>
+
+<script>
+   
+    const chartSpecs = [
+        "portfolio/Week6_Chart1.json",  
+        "portfolio/Week6_Chart2.json",  
+        "portfolio/Week6_Chart3.json",  
+        "portfolio/Week6_Chart4.json",  
+        "portfolio/Week6_Chart5.json", 
+        "portfolio/Week6_Chart6.json"   
+    ];
+    
+   
+    for (let i = 0; i < chartSpecs.length; i++) {
+        
+        const chartDiv = document.createElement('div');
+        chartDiv.id = `chart${i + 1}`;
+        chartDiv.style.backgroundColor = 'white';
+        chartDiv.style.padding = '15px';
+        chartDiv.style.borderRadius = '8px';
+        chartDiv.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        
+        
+        document.getElementById('chartGrid').appendChild(chartDiv);
+        
+        
+        vegaEmbed(`#chart${i + 1}`, chartSpecs[i]);
+        
+       
+        console.log(`✅ Embedded chart ${i + 1}: ${chartSpecs[i]}`);
+    }
+</script>
 </body>
     
 </html>

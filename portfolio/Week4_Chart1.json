@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "title": {
+    "text": "TechCrunch Coverage 2005-11",
+    "fontSize": 16,
+    "fontWeight": "normal",
+    "anchor": "middle"
+  },
+  "data": {
+    "values": [
+      {"category": "General Consumer Web", "percentage": 23},
+      {"category": "Social Network", "percentage": 12},
+      {"category": "Search", "percentage": 10},
+      {"category": "Mobile", "percentage": 9},
+      {"category": "Software", "percentage": 8},
+      {"category": "Entertainment", "percentage": 6},
+      {"category": "Hardware", "percentage": 6},
+      {"category": "E-Commerce", "percentage": 5},
+      {"category": "Advertising", "percentage": 3},
+      {"category": "Video", "percentage": 3},
+      {"category": "No Category", "percentage": 3},
+      {"category": "Enterprise", "percentage": 2},
+      {"category": "Other", "percentage": 2},
+      {"category": "Music", "percentage": 1},
+      {"category": "News", "percentage": 2},
+      {"category": "Networks/Hosting", "percentage": 1},
+      {"category": "Investor", "percentage": 1},
+      {"category": "PR", "percentage": 1},
+      {"category": "Cleantech", "percentage": 1}
+    ]
+  },
+  "mark": {"type": "arc", "outerRadius": 180},
+  "encoding": {
+    "theta": {"field": "percentage", "type": "quantitative"},
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#4472A8",
+          "#B15551",
+          "#6B9F5C",
+          "#8E6FA0",
+          "#5B8FA2",
+          "#C48A4F",
+          "#5580A3",
+          "#C26863",
+          "#6F8E60",
+          "#A2A2A2",
+          "#5B9FAA",
+          "#D99B7F",
+          "#8FA098",
+          "#C9A77F",
+          "#8BA3B3",
+          "#9F8FA3",
+          "#BFA095",
+          "#D9B59F",
+          "#A8C0B8"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {"field": "category", "type": "nominal", "title": "Category"},
+      {
+        "field": "percentage",
+        "type": "quantitative",
+        "title": "Percentage",
+        "format": ".0f"
+      }
+    ]
+  },
+  "config": {}
+}

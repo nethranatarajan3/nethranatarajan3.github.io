@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "title": {
+    "text": "TechCrunch Coverage by Category (2005-2011)",
+    "subtitle": "Consumer Web and Social Networks dominate tech coverage",
+    "fontSize": 18,
+    "subtitleFontSize": 13,
+    "anchor": "start",
+    "color": "#333333",
+    "subtitleColor": "#666666"
+  },
+  "data": {
+    "values": [
+      {"category": "General Consumer Web", "percentage": 23},
+      {"category": "Social Network", "percentage": 12},
+      {"category": "Search", "percentage": 10},
+      {"category": "Mobile", "percentage": 9},
+      {"category": "Software", "percentage": 8},
+      {"category": "Entertainment", "percentage": 6},
+      {"category": "Hardware", "percentage": 6},
+      {"category": "E-Commerce", "percentage": 5},
+      {"category": "Advertising", "percentage": 3},
+      {"category": "Video", "percentage": 3},
+      {"category": "No Category", "percentage": 3},
+      {"category": "Enterprise", "percentage": 2},
+      {"category": "Other", "percentage": 2},
+      {"category": "News", "percentage": 2},
+      {"category": "Music", "percentage": 1},
+      {"category": "Networks/Hosting", "percentage": 1},
+      {"category": "Investor", "percentage": 1},
+      {"category": "PR", "percentage": 1},
+      {"category": "Cleantech", "percentage": 1}
+    ]
+  },
+  "mark": {"type": "bar", "color": "#4169E1"},
+  "encoding": {
+    "y": {
+      "field": "category",
+      "type": "nominal",
+      "sort": "-x",
+      "axis": {"title": null, "labelLimit": 200}
+    },
+    "x": {
+      "field": "percentage",
+      "type": "quantitative",
+      "title": "Percentage of Coverage (%)",
+      "axis": {"grid": false}
+    },
+    "tooltip": [
+      {"field": "category", "type": "nominal", "title": "Category"},
+      {"field": "percentage", "type": "quantitative", "title": "Coverage %"}
+    ]
+  },
+  "config": {}
+}

@@ -174,27 +174,60 @@
     vegaEmbed('#Location9', figure_9_spec);
 </script>
 
-    <section>
+   <section>
     <div class="chart-description">
-        <h2 style=" margin-top: 30px; text-align: center;">CC5. Accessing data: Scraper and API</h2>
-        <p> 
-            Used Python to scrape Wikipedia's Supreme Court justice table. Cleaned MultiIndex structure, extracted appointment years, created tidy dataset showing 235 years of judicial appointments.
-        </p>
+        <h2 style="margin-top: 30px; text-align: center;">CC5. Accessing data: Scraper and API</h2>
     </div>
-    <figure id="Location4" style="display: flex; justify-content: center;"></figure>
-    <figure id="Location5" style="display: flex; justify-content: center;"></figure>
+    
+    <!-- API Challenge -->
+    <div style="margin-bottom: 40px;">
+        <h3 style="text-align: center;">API Challenge: World Bank GDP Data</h3>
+        <figure id="Location4" style="display: flex; justify-content: center;"></figure>
+        
+        <div style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: #f9f9f9; border-left: 4px solid #2c5aa0;">
+            <h4 style="margin-top: 0;">API Description</h4>
+            
+            <p><strong>Base URL:</strong></p>
+            <code style="background-color: #e8e8e8; padding: 5px; display: block; margin: 10px 0;">
+                https://api.worldbank.org/v2/country/
+            </code>
+            
+            <p><strong>API Structure:</strong></p>
+            <ul>
+                <li><strong>Countries:</strong> <code>VNM;THA;IDN;PHL;MYS</code> (Vietnam, Thailand, Indonesia, Philippines, Malaysia)</li>
+                <li><strong>Indicator:</strong> <code>NY.GDP.MKTP.KD.ZG</code> (GDP growth annual %)</li>
+                <li><strong>Format:</strong> <code>format=json</code> (Returns data in JSON format)</li>
+                <li><strong>Results per page:</strong> <code>per_page=1000</code> (Maximum results returned)</li>
+                <li><strong>Date range:</strong> <code>date=1990:2025</code> (Data from 1990 to 2025)</li>
+            </ul>
+            
+            <p><strong>Complete URL used in chart:</strong></p>
+            <code style="background-color: #e8e8e8; padding: 10px; display: block; margin: 10px 0; word-wrap: break-word; font-size: 12px;">
+                https://api.worldbank.org/v2/country/VNM;THA;IDN;PHL;MYS/indicator/NY.GDP.MKTP.KD.ZG?format=json&per_page=1000&date=1990:2025
+            </code>
+            
+            <p><strong>How it works:</strong> The World Bank API retrieves economic indicators for specified countries. The URL structure follows the pattern: <code>base_url/[countries]/indicator/[indicator_code]?[parameters]</code>. The API returns JSON data with two arrays: metadata (index 0) and actual data (index 1), which is accessed in Vega-Lite using <code>"format": {"property": "[1]"}</code>.</p>
+        </div>
+    </div>
+    
+    <!-- Scraping Challenge -->
+    <div style="margin-top: 40px;">
+        <h3 style="text-align: center;">Scraping Challenge: Supreme Court Justices</h3>
+        <p style="text-align: center; max-width: 800px; margin: 10px auto;">
+            Used Python to scrape Wikipedia's Supreme Court justice table. Cleaned MultiIndex structure, extracted appointment years, created tidy dataset showing 235 years of judicial appointments.
+            <br>
+            <a href="YOUR_COLAB_LINK_HERE" target="_blank" style="color: #2c5aa0; text-decoration: none; font-weight: bold;">→ View Python Notebook</a>
+        </p>
+        <figure id="Location5" style="display: flex; justify-content: center;"></figure>
+    </div>
 </section>
 
 <script>
-    
-
-    let figure_4_spec = "portfolio/Week2_Chart1.json";
-    let figure_5_spec = "portfolio/Week5_Chart1.json"
-    vegaEmbed('#Location4', figure_4_spec)
-    vegaEmbed('#Location5', figure_5_spec)
-
+    let figure_4_spec = "portfolio/Week5_Chart2.json";  // API chart
+    let figure_5_spec = "portfolio/Week5_Chart1.json";  // Scraping chart
+    vegaEmbed('#Location4', figure_4_spec);
+    vegaEmbed('#Location5', figure_5_spec);
 </script>
-
 </body>
     
 </html>

@@ -142,26 +142,36 @@
 
 <section>
     <div class="chart-description">
-        <h2 style="margin-top: 30px; text-align: center;">CC4: Re-create, then improve, someone else’s chart.</h2>
+        <h2 style="margin-top: 30px; text-align: center;">CC4: Re-create, then improve, someone else's chart.</h2>
         <p> 
-            
+            Replaced cluttered 19-slice pie chart with sorted horizontal bar chart. Used consistent color, clear labels, and intuitive sorting for easier comparison.
         </p>
     </div>
-   <figure id="Location8" style="display: flex; justify-content: center;"></figure>
-   <figure id="Location9" style="display: flex; justify-content: center;"></figure>
+    
+    <!-- Original and Replication side by side -->
+    <div style="display: flex; justify-content: space-around; gap: 20px; margin-bottom: 30px;">
+        <div style="flex: 1; text-align: center;">
+            <h3>Original Chart</h3>
+            <img src="portfolio/replication.png" alt="Original TechCrunch Chart" style="max-width: 100%; height: auto;">
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <h3>Replication</h3>
+            <figure id="Location8"></figure>
+        </div>
+    </div>
+    
+    <!-- Improved version below -->
+    <div style="text-align: center; margin-top: 30px;">
+        <h3>Improved Chart</h3>
+        <figure id="Location9" style="display: flex; justify-content: center;"></figure>
+    </div>
    
 </section>
-
 <script>
-    
-
-    let figure_7_spec = "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/Week4_GDPChart.json";
-    let figure_8_spec = "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/refs/heads/main/Week4_EduChart.json";
-
-
-    vegaEmbed('#Location7', figure_7_spec)
-    vegaEmbed('#Location8', figure_8_spec)
-    
+    let figure_8_spec = "portfolio/Week4_Chart1.json";
+    let figure_9_spec = "portfolio/Week4_Chart2.json";
+    vegaEmbed('#Location8', figure_8_spec);
+    vegaEmbed('#Location9', figure_9_spec);
 </script>
     
 

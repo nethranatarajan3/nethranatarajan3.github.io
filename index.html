@@ -228,6 +228,34 @@
     vegaEmbed('#Location10', figure_10_spec);
     vegaEmbed('#Location11', figure_11_spec);
 </script>
+
+    <section>
+    <div class="chart-description">
+        <h2 style="margin-top: 30px; text-align: center;">CC7: Base maps and choropleths</h2>
+        <p style="text-align: center; max-width: 900px; margin: 10px auto;"> 
+            Created two maps: a choropleth of Scotland showing crime data by local authority (2019-20), and a coordinate map of Wales displaying railway stations across the country.
+        </p>
+    </div>
+    
+    <!-- Scotland Choropleth and Wales Coordinate Map side by side -->
+    <div style="display: flex; justify-content: space-around; gap: 30px; margin-top: 30px;">
+        <div style="flex: 1; text-align: center;">
+            <h3>Scotland: Crime Choropleth</h3>
+            <figure id="Location12" style="display: flex; justify-content: center;"></figure>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <h3>Wales: Railway Stations (Coordinate Map)</h3>
+            <figure id="Location13" style="display: flex; justify-content: center;"></figure>
+        </div>
+    </div>
+</section>
+
+<script>
+    let figure_12_spec = "portfolio/Week7_Chart1.json";  // Scotland choropleth
+    let figure_13_spec = "portfolio/Week7_Chart2.json";  // Wales coordinate map
+    vegaEmbed('#Location12', figure_12_spec);
+    vegaEmbed('#Location13', figure_13_spec);
+</script>
 </body>
     
 </html>

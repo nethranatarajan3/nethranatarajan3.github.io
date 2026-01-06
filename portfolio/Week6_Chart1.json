@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "United States",
+    "fontSize": 14,
+    "subtitle": "GDP Growth (annual %)"
+  },
+  "width": 280,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/main/portfolio_data/data_WB-USA.json",
+    "format": {"property": "[1]"}
+  },
+  "mark": {"type": "line", "color": "#2c5aa0", "strokeWidth": 2, "point": true},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {"format": "%Y", "labelAngle": -45}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "GDP Growth (%)",
+      "scale": {"zero": false}
+    },
+    "tooltip": [
+      {"field": "date", "type": "temporal", "title": "Year"},
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "GDP Growth",
+        "format": ".2f"
+      }
+    ]
+  },
+  "config": {}
+}

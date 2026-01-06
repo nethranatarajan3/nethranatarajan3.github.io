@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Recorded Crime in Scotland by Local Authority (2019-20)",
+    "subtitle": "Total crimes and offences recorded. Source: Police Scotland",
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "anchor": "start"
+  },
+  "width": 350,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/refs/heads/main/MappingWorkshop/geo_data/LAD_SCT_2025_05.topojson",
+    "format": {"type": "topojson", "feature": "object_name"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.LAD25NM",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/main/portfolio_data/CrimeData_2019_20.csv"
+        },
+        "key": "COUNCIL NAME",
+        "fields": ["COUNCIL NAME", "RECORDED CRIME"]
+      },
+      "default": "0"
+    },
+    {
+      "joinaggregate": [
+        {"op": "sum", "field": "RECORDED CRIME", "as": "total_crimes"}
+      ],
+      "groupby": ["properties.LAD25NM"]
+    }
+  ],
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+  "encoding": {
+    "color": {
+      "field": "total_crimes",
+      "type": "quantitative",
+      "scale": {"scheme": "reds"},
+      "title": "Total Crimes"
+    },
+    "tooltip": [
+      {"field": "properties.LAD25NM", "type": "nominal", "title": "Council"},
+      {
+        "field": "total_crimes",
+        "type": "quantitative",
+        "title": "Total Crimes",
+        "format": ",.0f"
+      }
+    ]
+  },
+  "projection": {"type": "mercator"},
+  "config": {}
+}

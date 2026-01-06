@@ -1,0 +1,122 @@
+justice_name,start_year,end_year,years_served,president,state,position,decade
+1,1789,1795,6,George Washington,NY,Chief Justice,1780
+4,1789,1798,9,George Washington,PA,Associate Justice,1780
+2,1790,1791,1,George Washington,SC,Associate Justice,1790
+3,1790,1810,20,George Washington,MA,Associate Justice,1790
+5,1790,1795,5,George Washington,VA,Associate Justice,1790
+6,1790,1799,9,George Washington,NC,Associate Justice,1790
+7,1791,1793,2,George Washington,MD,Associate Justice,1790
+8,1793,1806,13,George Washington,NJ,Associate Justice,1790
+2,1795,1795,0,George Washington,SC,Chief Justice,1790
+9,1796,1811,15,George Washington,MD,Associate Justice,1790
+10,1796,1800,4,George Washington,CT,Chief Justice,1790
+11,1798,1829,31,John Adams,VA,Associate Justice,1790
+12,1800,1804,4,John Adams,NC,Associate Justice,1800
+13,1801,1835,34,John Adams,VA,Chief Justice,1800
+14,1804,1834,30,Thomas Jefferson,SC,Associate Justice,1800
+15,1807,1823,16,Thomas Jefferson,NY,Associate Justice,1800
+16,1807,1826,19,Thomas Jefferson,KY,Associate Justice,1800
+17,1811,1835,24,James Madison,MD,Associate Justice,1810
+18,1812,1845,33,James Madison,MA,Associate Justice,1810
+19,1823,1843,20,James Monroe,NY,Associate Justice,1820
+20,1826,1828,2,John Quincy Adams,KY,Associate Justice,1820
+21,1829,1861,32,Andrew Jackson,OH,Associate Justice,1820
+22,1830,1844,14,Andrew Jackson,PA,Associate Justice,1830
+23,1835,1867,32,Andrew Jackson,GA,Associate Justice,1830
+24,1836,1864,28,Andrew Jackson,MD,Chief Justice,1830
+25,1836,1841,5,Andrew Jackson,VA,Associate Justice,1830
+26,1837,1865,28,Andrew Jackson,TN,Associate Justice,1830
+27,1838,1852,14,Martin Van Buren,AL,Associate Justice,1830
+28,1842,1860,18,Martin Van Buren,VA,Associate Justice,1840
+29,1845,1872,27,John Tyler,NY,Associate Justice,1840
+30,1845,1851,6,James K. Polk,NH,Associate Justice,1840
+31,1846,1870,24,James K. Polk,PA,Associate Justice,1840
+32,1851,1857,6,Millard Fillmore,MA,Associate Justice,1850
+33,1853,1861,8,Franklin Pierce,AL,Associate Justice,1850
+34,1858,1881,23,James Buchanan,ME,Associate Justice,1850
+35,1862,1881,19,Abraham Lincoln,OH,Associate Justice,1860
+36,1862,1890,28,Abraham Lincoln,IA,Associate Justice,1860
+37,1862,1877,15,Abraham Lincoln,IL,Associate Justice,1860
+38,1863,1897,34,Abraham Lincoln,CA,Associate Justice,1860
+39,1864,1873,9,Abraham Lincoln,OH,Chief Justice,1860
+40,1870,1880,10,Ulysses S. Grant,PA,Associate Justice,1870
+41,1870,1892,22,Ulysses S. Grant,NJ,Associate Justice,1870
+42,1873,1882,9,Ulysses S. Grant,NY,Associate Justice,1870
+43,1874,1888,14,Ulysses S. Grant,OH,Chief Justice,1870
+44,1877,1911,34,Rutherford B. Hayes,KY,Associate Justice,1870
+45,1881,1887,6,Rutherford B. Hayes,GA,Associate Justice,1880
+46,1881,1889,8,James A. Garfield,OH,Associate Justice,1880
+47,1882,1902,20,Chester A. Arthur,MA,Associate Justice,1880
+48,1882,1893,11,Chester A. Arthur,NY,Associate Justice,1880
+49,1888,1893,5,Grover Cleveland,MS,Associate Justice,1880
+50,1888,1910,22,Grover Cleveland,IL,Chief Justice,1880
+51,1890,1910,20,Benjamin Harrison,KS,Associate Justice,1890
+52,1891,1906,15,Benjamin Harrison,MI,Associate Justice,1890
+53,1892,1903,11,Benjamin Harrison,PA,Associate Justice,1890
+54,1893,1895,2,Benjamin Harrison,TN,Associate Justice,1890
+55,1894,1910,16,Grover Cleveland,LA,Associate Justice,1890
+56,1896,1909,13,Grover Cleveland,NY,Associate Justice,1890
+57,1898,1925,27,William McKinley,CA,Associate Justice[i],1890
+58,1902,1932,30,Theodore Roosevelt,MA,Associate Justice[j],1900
+59,1903,1922,19,Theodore Roosevelt,OH,Associate Justice,1900
+60,1906,1910,4,Theodore Roosevelt,MA,Associate Justice,1900
+61,1910,1914,4,William Howard Taft,TN,Associate Justice,1910
+62,1910,1916,6,William Howard Taft,NY,Associate Justice,1910
+55,1910,1921,11,William Howard Taft,LA,Chief Justice,1910
+63,1911,1937,26,William Howard Taft,WY,Associate Justice,1910
+64,1911,1916,5,William Howard Taft,GA,Associate Justice,1910
+65,1912,1922,10,William Howard Taft,NJ,Associate Justice,1910
+66,1914,1941,27,Woodrow Wilson,TN,Associate Justice,1910
+67,1916,1939,23,Woodrow Wilson,MA,Associate Justice,1910
+68,1916,1922,6,Woodrow Wilson,OH,Associate Justice,1910
+69,1921,1930,9,Warren G. Harding,CT,Chief Justice,1920
+70,1922,1938,16,Warren G. Harding,UT,Associate Justice,1920
+71,1923,1939,16,Warren G. Harding,MN,Associate Justice,1920
+72,1923,1930,7,Warren G. Harding,TN,Associate Justice,1920
+73,1925,1941,16,Calvin Coolidge,NY,Associate Justice[l],1920
+62,1930,1941,11,Herbert Hoover,NY,Chief Justice,1930
+74,1930,1945,15,Herbert Hoover,PA,Associate Justice,1930
+75,1932,1938,6,Herbert Hoover,NY,Associate Justice,1930
+76,1937,1971,34,Franklin D. Roosevelt,AL,Associate Justice[m],1930
+77,1938,1957,19,Franklin D. Roosevelt,KY,Associate Justice,1930
+78,1939,1962,23,Franklin D. Roosevelt,MA,Associate Justice,1930
+79,1939,1975,36,Franklin D. Roosevelt,CT,Associate Justice,1930
+80,1940,1949,9,Franklin D. Roosevelt,MI,Associate Justice,1940
+73,1941,1946,5,Franklin D. Roosevelt,NY,Chief Justice,1940
+81,1941,1942,1,Franklin D. Roosevelt,SC,Associate Justice,1940
+82,1941,1954,13,Franklin D. Roosevelt,NY,Associate Justice,1940
+83,1943,1949,6,Franklin D. Roosevelt,IA,Associate Justice,1940
+84,1945,1958,13,Harry S. Truman,OH,Associate Justice,1940
+85,1946,1953,7,Harry S. Truman,KY,Chief Justice,1940
+86,1949,1967,18,Harry S. Truman,TX,Associate Justice,1940
+87,1949,1956,7,Harry S. Truman,IN,Associate Justice,1940
+88,1953,1969,16,Dwight D. Eisenhower,CA,Chief Justice,1950
+89,1955,1971,16,Dwight D. Eisenhower,NY,Associate Justice,1950
+90,1956,1990,34,Dwight D. Eisenhower,NJ,Associate Justice,1950
+91,1957,1962,5,Dwight D. Eisenhower,MO,Associate Justice,1950
+92,1958,1981,23,Dwight D. Eisenhower,OH,Associate Justice,1950
+93,1962,1993,31,John F. Kennedy,CO,Associate Justice,1960
+94,1962,1965,3,John F. Kennedy,IL,Associate Justice,1960
+95,1965,1969,4,Lyndon B. Johnson,TN,Associate Justice,1960
+96,1967,1991,24,Lyndon B. Johnson,NY,Associate Justice,1960
+97,1969,1986,17,Richard Nixon,VA,Chief Justice,1960
+98,1970,1994,24,Richard Nixon,MN,Associate Justice,1970
+99,1972,1987,15,Richard Nixon,VA,Associate Justice,1970
+100,1972,1986,14,Richard Nixon,AZ,Associate Justice,1970
+101,1975,2010,35,Gerald Ford,IL,Associate Justice[o],1970
+102,1981,2006,25,Ronald Reagan,AZ,Associate Justice,1980
+100,1986,2005,19,Ronald Reagan,VA,Chief Justice,1980
+103,1986,2016,30,Ronald Reagan,VA,Associate Justice,1980
+104,1988,2018,30,Ronald Reagan,CA,Associate Justice,1980
+105,1990,2009,19,George H. W. Bush,NH,Associate Justice,1990
+106,1991,2025,34,George H. W. Bush,GA,Associate Justice,1990
+107,1993,2020,27,Bill Clinton,NY,Associate Justice,1990
+108,1994,2022,28,Bill Clinton,MA,Associate Justice,1990
+109,2005,2025,20,George W. Bush,MD,Chief Justice,2000
+110,2006,2025,19,George W. Bush,NJ,Associate Justice,2000
+111,2009,2025,16,Barack Obama,NY,Associate Justice,2000
+112,2010,2025,15,Barack Obama,MA,Associate Justice,2010
+113,2017,2025,8,Donald Trump,CO,Associate Justice,2010
+114,2018,2025,7,Donald Trump,MD,Associate Justice,2010
+115,2020,2025,5,Donald Trump,IN,Associate Justice,2020
+116,2022,2025,3,Joe Biden,DC,Associate Justice,2020

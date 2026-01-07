@@ -1,0 +1,69 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"Year": 1950, "Length": 19811, "Period": "Baseline"},
+      {"Year": 1960, "Length": 23789, "Period": "10y later"},
+      {"Year": 1970, "Length": 23838, "Period": "10y later"},
+      {"Year": 1980, "Length": 31671, "Period": "10y later"},
+      {"Year": 1990, "Length": 57737, "Period": "10y later"},
+      {"Year": 2000, "Length": 70934, "Period": "10y later"},
+      {"Year": 2010, "Length": 97991, "Period": "10y later"},
+      {"Year": 2014, "Length": 101011, "Period": "4y later"},
+      {"Year": 2015, "Length": 114158, "Period": "1y later"},
+      {"Year": 2017, "Length": 126350, "Period": "2y later"}
+    ]
+  },
+  "title": "Total Length Over Time (Note: Irregular Measurement Intervals)",
+  "width": 700,
+  "height": 400,
+  "transform": [{"calculate": "datum.Length / 1000", "as": "Length_thousands"}],
+  "layer": [
+    {
+      "mark": {"type": "line", "stroke": "steelblue", "strokeWidth": 3},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "title": "Year",
+          "scale": {"zero": false},
+          "axis": {"format": "d"}
+        },
+        "y": {
+          "field": "Length_thousands",
+          "type": "quantitative",
+          "title": "Length (thousands of km)",
+          "axis": {"format": ".1f"}
+        }
+      }
+    },
+    {
+      "mark": {"type": "circle", "fill": "steelblue", "size": 80},
+      "encoding": {
+        "x": {"field": "Year", "type": "quantitative"},
+        "y": {"field": "Length_thousands", "type": "quantitative"},
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "Length",
+            "type": "quantitative",
+            "title": "Length (km)",
+            "format": ","
+          },
+          {
+            "field": "Length_thousands",
+            "type": "quantitative",
+            "title": "Length (000s km)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}}
+}

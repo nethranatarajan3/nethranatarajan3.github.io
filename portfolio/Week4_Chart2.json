@@ -2,77 +2,100 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "values": [
-      {"Year": 1950, "Length": 19811, "Period": "Baseline"},
-      {"Year": 1960, "Length": 23789, "Period": "10y later"},
-      {"Year": 1970, "Length": 23838, "Period": "10y later"},
-      {"Year": 1980, "Length": 31671, "Period": "10y later"},
-      {"Year": 1990, "Length": 33000, "Period": "10y later"},
-      {"Year": 2000, "Length": 57737, "Period": "10y later"},
-      {"Year": 2010, "Length": 70934, "Period": "10y later"},
-      {"Year": 2014, "Length": 97991, "Period": "10y later"},
-      {"Year": 2015, "Length": 101011, "Period": "4y later"},
-      {"Year": 2016, "Length": 114158, "Period": "1y later"},
-      {"Year": 2017, "Length": 126350, "Period": "2y later"}
+      {"Year": 1950, "Length": 19811, "Growth": null},
+      {"Year": 1960, "Length": 23789, "Growth": 20.1},
+      {"Year": 1970, "Length": 23838, "Growth": 0.2},
+      {"Year": 1980, "Length": 31671, "Growth": 32.9},
+      {"Year": 1990, "Length": 33000, "Growth": 4.2},
+      {"Year": 2000, "Length": 57737, "Growth": 75.0},
+      {"Year": 2010, "Length": 70934, "Growth": 22.9},
+      {"Year": 2014, "Length": 97991, "Growth": 38.1},
+      {"Year": 2015, "Length": 101011, "Growth": 3.1},
+      {"Year": 2016, "Length": 114158, "Growth": 13.0},
+      {"Year": 2017, "Length": 126350, "Growth": 10.7}
     ]
   },
   "title": {
-    "text": "Total Length of National Highways in India Over Time ",
-    "subtitle": [
-      "Source: Basic Road Statistics of India Official Report; (Note: Irregular Measurement Intervals)"
-    ],
+    "text": "National Highways in India: Length and Growth Over Time",
+    "subtitle": "Source: Basic Road Statistics of India Official Report; (Note: Irregular Measurement Intervals)",
     "fontSize": 18,
     "subtitleFontSize": 12,
-    "subtitleFontStyle": "italic",
-    "offset": 20
+    "subtitleFontStyle": "italic", 
+    "offset": 25
   },
-  "width": 700,
-  "height": 400,
   "transform": [{"calculate": "datum.Length / 1000", "as": "Length_thousands"}],
-  "layer": [
+  "vconcat": [
     {
-      "mark": {"type": "line", "stroke": "steelblue", "strokeWidth": 3},
-      "encoding": {
-        "x": {
-          "field": "Year",
-          "type": "quantitative",
-          "title": "Year",
-          "scale": {"zero": false},
-          "axis": {"format": "d"}
+      "width": 700,
+      "height": 250,
+      "title": "Total Length of National Highways",
+      "layer": [
+        {
+          "mark": {"type": "line", "stroke": "steelblue", "strokeWidth": 3},
+          "encoding": {
+            "x": {
+              "field": "Year",
+              "type": "quantitative",
+              "title": null,
+              "scale": {"zero": false},
+              "axis": {"format": "d", "labels": false}
+            },
+            "y": {
+              "field": "Length_thousands",
+              "type": "quantitative",
+              "title": "Length (thousands of km)"
+            }
+          }
         },
-        "y": {
-          "field": "Length_thousands",
-          "type": "quantitative",
-          "title": "Length (thousands of km)",
-          "axis": {"format": ".1f"}
+        {
+          "mark": {"type": "circle", "fill": "steelblue", "size": 80},
+          "encoding": {
+            "x": {"field": "Year", "type": "quantitative"},
+            "y": {"field": "Length_thousands", "type": "quantitative"},
+            "tooltip": [
+              {"field": "Year", "type": "quantitative", "title": "Year", "format": "d"},
+              {"field": "Length", "type": "quantitative", "title": "Length (km)", "format": ","},
+              {"field": "Length_thousands", "type": "quantitative", "title": "Length (000s km)", "format": ".1f"}
+            ]
+          }
         }
-      }
+      ]
     },
     {
-      "mark": {"type": "circle", "fill": "steelblue", "size": 80},
-      "encoding": {
-        "x": {"field": "Year", "type": "quantitative"},
-        "y": {"field": "Length_thousands", "type": "quantitative"},
-        "tooltip": [
-          {
-            "field": "Year",
-            "type": "quantitative",
-            "title": "Year",
-            "format": "d"
-          },
-          {
-            "field": "Length",
-            "type": "quantitative",
-            "title": "Length (km)",
-            "format": ","
-          },
-          {
-            "field": "Length_thousands",
-            "type": "quantitative",
-            "title": "Length (000s km)",
-            "format": ".1f"
+      "width": 700,
+      "height": 250,
+      "title": "Growth Rate Over Time",
+      "transform": [{"filter": "datum.Growth !== null"}],
+      "layer": [
+        {
+          "mark": {"type": "line", "stroke": "#27ae60", "strokeWidth": 3},
+          "encoding": {
+            "x": {
+              "field": "Year",
+              "type": "quantitative",
+              "title": "Year",
+              "scale": {"zero": false, "domain": [1950, 2017]},
+              "axis": {"format": "d"}
+            },
+            "y": {
+              "field": "Growth",
+              "type": "quantitative",
+              "title": "Growth (%)"
+            }
           }
-        ]
-      }
+        },
+        {
+          "mark": {"type": "circle", "fill": "#27ae60", "size": 80},
+          "encoding": {
+            "x": {"field": "Year", "type": "quantitative"},
+            "y": {"field": "Growth", "type": "quantitative"},
+            "tooltip": [
+              {"field": "Year", "type": "quantitative", "title": "Year", "format": "d"},
+              {"field": "Growth", "type": "quantitative", "title": "Growth Rate (%)", "format": ".1f"}
+            ]
+          }
+        }
+      ]
     }
   ],
   "config": {"view": {"stroke": null}}

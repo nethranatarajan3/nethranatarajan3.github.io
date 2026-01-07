@@ -2,14 +2,14 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Similar Wealth, Different Health Outcomes",
-    "subtitle": [" ",
+    "subtitle": [
       "Plotting IMR against Statewise Per Capita GDP (2022), with bubble size representing population size and coloured bubbles representing case study states",
       "Source: Census of India SRS Bulletin (2022) for IMR; Open Government Data Portal for GDP (2022); Census for Population (2011)"
     ],
     "fontSize": 18,
     "subtitleFontSize": 12,
     "subtitleFontStyle": "italic",
-    "offset": 25
+    "offset": 20
   },
   "width": 600,
   "height": 450,

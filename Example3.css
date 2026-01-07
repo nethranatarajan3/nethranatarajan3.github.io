@@ -41,6 +41,7 @@ p {
 section {
   margin-bottom: 2.5em;  /* We want a little more space between sections */
   text-align: center;
+  border-bottom: 1px solid #e0e0e0;
 }
 /* Center the charts */
 figure {

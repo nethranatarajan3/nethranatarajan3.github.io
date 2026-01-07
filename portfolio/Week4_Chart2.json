@@ -14,7 +14,16 @@
       {"Year": 2017, "Length": 126350, "Period": "2y later"}
     ]
   },
-  "title": "Total Length Over Time (Note: Irregular Measurement Intervals)",
+  "title": {
+    "text": "Total Length of National Highways in India Over Time ",
+    "subtitle": [
+      "Source: Basic Road Statistics of India Official Report; (Note: Irregular Measurement Intervals)"
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleFontStyle": "italic",
+    "offset": 20
+  },
   "width": 700,
   "height": 400,
   "transform": [{"calculate": "datum.Length / 1000", "as": "Length_thousands"}],

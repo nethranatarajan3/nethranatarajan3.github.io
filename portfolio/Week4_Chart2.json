@@ -6,11 +6,12 @@
       {"Year": 1960, "Length": 23789, "Period": "10y later"},
       {"Year": 1970, "Length": 23838, "Period": "10y later"},
       {"Year": 1980, "Length": 31671, "Period": "10y later"},
-      {"Year": 1990, "Length": 57737, "Period": "10y later"},
-      {"Year": 2000, "Length": 70934, "Period": "10y later"},
-      {"Year": 2010, "Length": 97991, "Period": "10y later"},
-      {"Year": 2014, "Length": 101011, "Period": "4y later"},
-      {"Year": 2015, "Length": 114158, "Period": "1y later"},
+      {"Year": 1990, "Length": 33000, "Period": "10y later"},
+      {"Year": 2000, "Length": 57737, "Period": "10y later"},
+      {"Year": 2010, "Length": 70934, "Period": "10y later"},
+      {"Year": 2014, "Length": 97991, "Period": "10y later"},
+      {"Year": 2015, "Length": 101011, "Period": "4y later"},
+      {"Year": 2016, "Length": 114158, "Period": "1y later"},
       {"Year": 2017, "Length": 126350, "Period": "2y later"}
     ]
   },

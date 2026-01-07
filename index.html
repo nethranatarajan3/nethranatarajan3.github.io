@@ -303,6 +303,29 @@
     vegaEmbed('#Location13', figure_13_spec);
 </script>
 
+    <section>
+    <div class="chart-description">
+        <h2 style="margin-top: 30px; text-align: center;">CC8: Big Data - Extracting a story from millions of prices</h2>
+        <p style="text-align: center; max-width: 900px; margin: 20px auto; line-height: 1.6;"> 
+            I used the AutoCPI dataset for both graphs. I first merged the prices and items datasets, then queried for "Ice Cream Bars, Lollies and Cones" and calculated average prices over time. For the second chart, I filtered for items containing "ice cream", grouped by store ID, and graphed average prices by store.
+            <br><br>
+            <a href="https://github.com/nethranatarajan3/nethranatarajan3.github.io/blob/main/portfolio_code/CC8.ipynb" target="_blank" style="color: #2c5aa0; text-decoration: none; font-weight: bold;">→ View Python Notebook</a>
+        </p>
+    </div>
+    
+    <!-- Charts stacked vertically, centered -->
+    <div style="max-width: 800px; margin: 0 auto;">
+        <figure id="Location14" style="display: flex; justify-content: center; margin-bottom: 40px;"></figure>
+        <figure id="Location15" style="display: flex; justify-content: center;"></figure>
+    </div>
+</section>
+
+<script>
+    let figure_14_spec = "portfolio/Week8_Chart1.json";
+    let figure_15_spec = "portfolio/Week8_Chart2.json";
+    vegaEmbed('#Location14', figure_14_spec);
+    vegaEmbed('#Location15', figure_15_spec);
+</script>
     
 </body>
     

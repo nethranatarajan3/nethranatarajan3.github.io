@@ -39,9 +39,14 @@ p {
   text-align: center;
 }
 section {
-  margin-bottom: 2.5em;  /* We want a little more space between sections */
+  margin-bottom: 3em;      /* Space after the section (increase this for more space) */
+  padding-bottom: 2em;     /* Space between content and the border line */
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+section:last-child {
+  border-bottom: none;     /* Remove border after the last section */
 }
 /* Center the charts */
 figure {

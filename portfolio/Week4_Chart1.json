@@ -32,37 +32,44 @@
       },
       {
         "Year": 1990,
-        "Length": 57.737,
-        "Growth": 82.3,
+        "Length": 33,
+        "Growth": 4.4,
         "TimeLabel": "1990-91",
         "Series": "Total Length [in '000kms] Left axis"
       },
       {
         "Year": 2000,
-        "Length": 70.934,
-        "Growth": 22.9,
+        "Length": 57.737,
+        "Growth": 82.3,
         "TimeLabel": "2000-01",
         "Series": "Total Length [in '000kms] Left axis"
       },
       {
         "Year": 2010,
-        "Length": 97.991,
-        "Growth": 38.1,
+        "Length": 70.934,
+        "Growth": 22.9,
         "TimeLabel": "2010-11",
         "Series": "Total Length [in '000kms] Left axis"
       },
       {
         "Year": 2014,
-        "Length": 101.011,
-        "Growth": 3.1,
+        "Length": 97.991,
+        "Growth": 38.1,
         "TimeLabel": "2014-15",
         "Series": "Total Length [in '000kms] Left axis"
       },
       {
         "Year": 2015,
+        "Length": 101.011,
+        "Growth": 3.1,
+        "TimeLabel": "2015-16",
+        "Series": "Total Length [in '000kms] Left axis"
+      },
+      {
+        "Year": 2016,
         "Length": 114.158,
         "Growth": 13,
-        "TimeLabel": "2015-16",
+        "TimeLabel": "2016-17",
         "Series": "Total Length [in '000kms] Left axis"
       },
       {
@@ -101,6 +108,7 @@
             "2010-11",
             "2014-15",
             "2015-16",
+            "2016-17",
             "2017-18"
           ]
         },

@@ -9,8 +9,9 @@
       "Toggle to see how quality has changed"
     ],
     "fontSize": 18,
-    "subtitleFontSize": 11,
-    "subtitleFontStyle": "italic"
+    "subtitleFontSize": 12,
+    "subtitleFontStyle": "italic",
+    "offset": 20
   },
   "width": 650,
   "height": 450,

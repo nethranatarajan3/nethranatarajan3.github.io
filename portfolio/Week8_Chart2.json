@@ -1,0 +1,536 @@
+{
+  "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}},
+  "data": {"name": "data-063790d96614917d0b45691b7469c079"},
+  "mark": {"type": "rect"},
+  "encoding": {
+    "color": {
+      "field": "price",
+      "scale": {"scheme": "viridis"},
+      "title": "Avg Price (£)",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {"field": "store_label", "title": "Store", "type": "nominal"},
+      {"field": "description", "title": "Full Product Name", "type": "nominal"},
+      {
+        "field": "price",
+        "format": ".2f",
+        "title": "Avg Price",
+        "type": "quantitative"
+      }
+    ],
+    "x": {"field": "store_label", "title": "Store", "type": "nominal"},
+    "y": {
+      "field": "description_short",
+      "title": "Product Category",
+      "type": "nominal"
+    }
+  },
+  "height": 400,
+  "title": {
+    "text": "Price Comparison Heatmap: Top 10 Products Across Stores",
+    "subtitle": [
+      "Source: AutoCPI; Depicting Price Comparisons Across major UK Supermarkets"
+    ],
+    "fontSize": 18,
+    "subtitleFontSize": 12,
+    "subtitleFontStyle": "italic",
+    "offset": 20
+  },
+  "width": 500,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-063790d96614917d0b45691b7469c079": [
+      {
+        "store_id": 1,
+        "description": "CAKES, TARTS AND SWEET PIES",
+        "price": 4.125084998015611,
+        "store_label": "Store 1",
+        "description_short": "CAKES, TARTS AND SWEET PIES"
+      },
+      {
+        "store_id": 1,
+        "description": "CHOCOLATE, NO ADDITIONAL FILLING (EXCL. ASSORTMENT AND COOKING)",
+        "price": 2.0228594206749935,
+        "store_label": "Store 1",
+        "description_short": "CHOCOLATE,"
+      },
+      {
+        "store_id": 1,
+        "description": "COFFEE",
+        "price": 4.255106670673078,
+        "store_label": "Store 1",
+        "description_short": "COFFEE"
+      },
+      {
+        "store_id": 1,
+        "description": "CONDIMENTS",
+        "price": 2.1797739050909457,
+        "store_label": "Store 1",
+        "description_short": "CONDIMENTS"
+      },
+      {
+        "store_id": 1,
+        "description": "CRISPS, POTATO",
+        "price": 1.9116970911882625,
+        "store_label": "Store 1",
+        "description_short": "CRISPS, POTATO"
+      },
+      {
+        "store_id": 1,
+        "description": "PRE-COOKED DISHES BASED ON MEAT, FISH, VEGETABLES, PASTA OR OTHER CEREALS, CHILLED OR FROZEN",
+        "price": 3.634041912766924,
+        "store_label": "Store 1",
+        "description_short": "PRE-COOKED"
+      },
+      {
+        "store_id": 1,
+        "description": "SPICES AND CULINARY HERBS (EXCL. SEEDS)",
+        "price": 1.6510867723587075,
+        "store_label": "Store 1",
+        "description_short": "SPICES"
+      },
+      {
+        "store_id": 1,
+        "description": "WINE, RED",
+        "price": 9.823107397321595,
+        "store_label": "Store 1",
+        "description_short": "WINE, RED"
+      },
+      {
+        "store_id": 1,
+        "description": "WINE, WHITE",
+        "price": 8.665633395522388,
+        "store_label": "Store 1",
+        "description_short": "WINE, WHITE"
+      },
+      {
+        "store_id": 1,
+        "description": "YOGHURT, FROM MILK OF COWS",
+        "price": 2.19411753752188,
+        "store_label": "Store 1",
+        "description_short": "YOGHURT, FROM MILK OF COWS"
+      },
+      {
+        "store_id": 2,
+        "description": "CAKES, TARTS AND SWEET PIES",
+        "price": 3.7972582637779855,
+        "store_label": "Store 2",
+        "description_short": "CAKES, TARTS AND SWEET PIES"
+      },
+      {
+        "store_id": 2,
+        "description": "CHOCOLATE, NO ADDITIONAL FILLING (EXCL. ASSORTMENT AND COOKING)",
+        "price": 2.2015742842043085,
+        "store_label": "Store 2",
+        "description_short": "CHOCOLATE,"
+      },
+      {
+        "store_id": 2,
+        "description": "COFFEE",
+        "price": 4.469460578681295,
+        "store_label": "Store 2",
+        "description_short": "COFFEE"
+      },
+      {
+        "store_id": 2,
+        "description": "CONDIMENTS",
+        "price": 2.250007977308988,
+        "store_label": "Store 2",
+        "description_short": "CONDIMENTS"
+      },
+      {
+        "store_id": 2,
+        "description": "CRISPS, POTATO",
+        "price": 1.9764587759863352,
+        "store_label": "Store 2",
+        "description_short": "CRISPS, POTATO"
+      },
+      {
+        "store_id": 2,
+        "description": "PRE-COOKED DISHES BASED ON MEAT, FISH, VEGETABLES, PASTA OR OTHER CEREALS, CHILLED OR FROZEN",
+        "price": 3.9214171017762967,
+        "store_label": "Store 2",
+        "description_short": "PRE-COOKED"
+      },
+      {
+        "store_id": 2,
+        "description": "SPICES AND CULINARY HERBS (EXCL. SEEDS)",
+        "price": 1.5868515304512465,
+        "store_label": "Store 2",
+        "description_short": "SPICES"
+      },
+      {
+        "store_id": 2,
+        "description": "WINE, RED",
+        "price": 9.81553809736183,
+        "store_label": "Store 2",
+        "description_short": "WINE, RED"
+      },
+      {
+        "store_id": 2,
+        "description": "WINE, WHITE",
+        "price": 9.153193396051016,
+        "store_label": "Store 2",
+        "description_short": "WINE, WHITE"
+      },
+      {
+        "store_id": 2,
+        "description": "YOGHURT, FROM MILK OF COWS",
+        "price": 2.180680342768112,
+        "store_label": "Store 2",
+        "description_short": "YOGHURT, FROM MILK OF COWS"
+      },
+      {
+        "store_id": 3,
+        "description": "CAKES, TARTS AND SWEET PIES",
+        "price": 4.562159535452323,
+        "store_label": "Store 3",
+        "description_short": "CAKES, TARTS AND SWEET PIES"
+      },
+      {
+        "store_id": 3,
+        "description": "CHOCOLATE, NO ADDITIONAL FILLING (EXCL. ASSORTMENT AND COOKING)",
+        "price": 2.049694030472067,
+        "store_label": "Store 3",
+        "description_short": "CHOCOLATE,"
+      },
+      {
+        "store_id": 3,
+        "description": "COFFEE",
+        "price": 3.970400909470558,
+        "store_label": "Store 3",
+        "description_short": "COFFEE"
+      },
+      {
+        "store_id": 3,
+        "description": "CONDIMENTS",
+        "price": 2.056410116371886,
+        "store_label": "Store 3",
+        "description_short": "CONDIMENTS"
+      },
+      {
+        "store_id": 3,
+        "description": "CRISPS, POTATO",
+        "price": 1.9288464947452835,
+        "store_label": "Store 3",
+        "description_short": "CRISPS, POTATO"
+      },
+      {
+        "store_id": 3,
+        "description": "PRE-COOKED DISHES BASED ON MEAT, FISH, VEGETABLES, PASTA OR OTHER CEREALS, CHILLED OR FROZEN",
+        "price": 3.126164675148759,
+        "store_label": "Store 3",
+        "description_short": "PRE-COOKED"
+      },
+      {
+        "store_id": 3,
+        "description": "SPICES AND CULINARY HERBS (EXCL. SEEDS)",
+        "price": 1.5199021194300826,
+        "store_label": "Store 3",
+        "description_short": "SPICES"
+      },
+      {
+        "store_id": 3,
+        "description": "WINE, RED",
+        "price": 8.39621218192747,
+        "store_label": "Store 3",
+        "description_short": "WINE, RED"
+      },
+      {
+        "store_id": 3,
+        "description": "WINE, WHITE",
+        "price": 7.965710213488598,
+        "store_label": "Store 3",
+        "description_short": "WINE, WHITE"
+      },
+      {
+        "store_id": 3,
+        "description": "YOGHURT, FROM MILK OF COWS",
+        "price": 1.7962169826875516,
+        "store_label": "Store 3",
+        "description_short": "YOGHURT, FROM MILK OF COWS"
+      },
+      {
+        "store_id": 4,
+        "description": "CAKES, TARTS AND SWEET PIES",
+        "price": 3.605028930999566,
+        "store_label": "Store 4",
+        "description_short": "CAKES, TARTS AND SWEET PIES"
+      },
+      {
+        "store_id": 4,
+        "description": "CHOCOLATE, NO ADDITIONAL FILLING (EXCL. ASSORTMENT AND COOKING)",
+        "price": 1.8421010151439507,
+        "store_label": "Store 4",
+        "description_short": "CHOCOLATE,"
+      },
+      {
+        "store_id": 4,
+        "description": "COFFEE",
+        "price": 3.995731864886482,
+        "store_label": "Store 4",
+        "description_short": "COFFEE"
+      },
+      {
+        "store_id": 4,
+        "description": "CONDIMENTS",
+        "price": 2.2178679194145814,
+        "store_label": "Store 4",
+        "description_short": "CONDIMENTS"
+      },
+      {
+        "store_id": 4,
+        "description": "CRISPS, POTATO",
+        "price": 1.8141615551571202,
+        "store_label": "Store 4",
+        "description_short": "CRISPS, POTATO"
+      },
+      {
+        "store_id": 4,
+        "description": "PRE-COOKED DISHES BASED ON MEAT, FISH, VEGETABLES, PASTA OR OTHER CEREALS, CHILLED OR FROZEN",
+        "price": 3.179207832400905,
+        "store_label": "Store 4",
+        "description_short": "PRE-COOKED"
+      },
+      {
+        "store_id": 4,
+        "description": "SPICES AND CULINARY HERBS (EXCL. SEEDS)",
+        "price": 1.681913387466167,
+        "store_label": "Store 4",
+        "description_short": "SPICES"
+      },
+      {
+        "store_id": 4,
+        "description": "WINE, RED",
+        "price": 9.228914785142026,
+        "store_label": "Store 4",
+        "description_short": "WINE, RED"
+      },
+      {
+        "store_id": 4,
+        "description": "WINE, WHITE",
+        "price": 9.18085760847423,
+        "store_label": "Store 4",
+        "description_short": "WINE, WHITE"
+      },
+      {
+        "store_id": 4,
+        "description": "YOGHURT, FROM MILK OF COWS",
+        "price": 1.9634537707711974,
+        "store_label": "Store 4",
+        "description_short": "YOGHURT, FROM MILK OF COWS"
+      },
+      {
+        "store_id": 5,
+        "description": "CAKES, TARTS AND SWEET PIES",
+        "price": 1.9491634033463865,
+        "store_label": "Store 5",
+        "description_short": "CAKES, TARTS AND SWEET PIES"
+      },
+      {
+        "store_id": 5,
+        "description": "CHOCOLATE, NO ADDITIONAL FILLING (EXCL. ASSORTMENT AND COOKING)",
+        "price": 1.6401933064050778,
+        "store_label": "Store 5",
+        "description_short": "CHOCOLATE,"
+      },
+      {
+        "store_id": 5,
+        "description": "COFFEE",
+        "price": 2.407880658436214,
+        "store_label": "Store 5",
+        "description_short": "COFFEE"
+      },
+      {
+        "store_id": 5,
+        "description": "CONDIMENTS",
+        "price": 1.339202037351443,
+        "store_label": "Store 5",
+        "description_short": "CONDIMENTS"
+      },
+      {
+        "store_id": 5,
+        "description": "CRISPS, POTATO",
+        "price": 1.4368193484698915,
+        "store_label": "Store 5",
+        "description_short": "CRISPS, POTATO"
+      },
+      {
+        "store_id": 5,
+        "description": "PRE-COOKED DISHES BASED ON MEAT, FISH, VEGETABLES, PASTA OR OTHER CEREALS, CHILLED OR FROZEN",
+        "price": 2.6857392178362574,
+        "store_label": "Store 5",
+        "description_short": "PRE-COOKED"
+      },
+      {
+        "store_id": 5,
+        "description": "SPICES AND CULINARY HERBS (EXCL. SEEDS)",
+        "price": 0.8884116809116809,
+        "store_label": "Store 5",
+        "description_short": "SPICES"
+      },
+      {
+        "store_id": 5,
+        "description": "WINE, RED",
+        "price": 6.509207001723909,
+        "store_label": "Store 5",
+        "description_short": "WINE, RED"
+      },
+      {
+        "store_id": 5,
+        "description": "WINE, WHITE",
+        "price": 6.366483755635008,
+        "store_label": "Store 5",
+        "description_short": "WINE, WHITE"
+      },
+      {
+        "store_id": 5,
+        "description": "YOGHURT, FROM MILK OF COWS",
+        "price": 1.2591604376557253,
+        "store_label": "Store 5",
+        "description_short": "YOGHURT, FROM MILK OF COWS"
+      },
+      {
+        "store_id": 8,
+        "description": "CAKES, TARTS AND SWEET PIES",
+        "price": 3.4677940663176265,
+        "store_label": "Store 8",
+        "description_short": "CAKES, TARTS AND SWEET PIES"
+      },
+      {
+        "store_id": 8,
+        "description": "CHOCOLATE, NO ADDITIONAL FILLING (EXCL. ASSORTMENT AND COOKING)",
+        "price": 2.287960893854749,
+        "store_label": "Store 8",
+        "description_short": "CHOCOLATE,"
+      },
+      {
+        "store_id": 8,
+        "description": "COFFEE",
+        "price": 4.66699074074074,
+        "store_label": "Store 8",
+        "description_short": "COFFEE"
+      },
+      {
+        "store_id": 8,
+        "description": "CONDIMENTS",
+        "price": 2.4472757666589806,
+        "store_label": "Store 8",
+        "description_short": "CONDIMENTS"
+      },
+      {
+        "store_id": 8,
+        "description": "CRISPS, POTATO",
+        "price": 2.008445811830091,
+        "store_label": "Store 8",
+        "description_short": "CRISPS, POTATO"
+      },
+      {
+        "store_id": 8,
+        "description": "PRE-COOKED DISHES BASED ON MEAT, FISH, VEGETABLES, PASTA OR OTHER CEREALS, CHILLED OR FROZEN",
+        "price": 4.438617945007236,
+        "store_label": "Store 8",
+        "description_short": "PRE-COOKED"
+      },
+      {
+        "store_id": 8,
+        "description": "SPICES AND CULINARY HERBS (EXCL. SEEDS)",
+        "price": 1.5034489795918367,
+        "store_label": "Store 8",
+        "description_short": "SPICES"
+      },
+      {
+        "store_id": 8,
+        "description": "WINE, RED",
+        "price": 10.755739164852562,
+        "store_label": "Store 8",
+        "description_short": "WINE, RED"
+      },
+      {
+        "store_id": 8,
+        "description": "WINE, WHITE",
+        "price": 11.198159392789375,
+        "store_label": "Store 8",
+        "description_short": "WINE, WHITE"
+      },
+      {
+        "store_id": 8,
+        "description": "YOGHURT, FROM MILK OF COWS",
+        "price": 2.3372269830806416,
+        "store_label": "Store 8",
+        "description_short": "YOGHURT, FROM MILK OF COWS"
+      },
+      {
+        "store_id": 9,
+        "description": "CAKES, TARTS AND SWEET PIES",
+        "price": 2.160492443713375,
+        "store_label": "Store 9",
+        "description_short": "CAKES, TARTS AND SWEET PIES"
+      },
+      {
+        "store_id": 9,
+        "description": "CHOCOLATE, NO ADDITIONAL FILLING (EXCL. ASSORTMENT AND COOKING)",
+        "price": 1.9198515072904554,
+        "store_label": "Store 9",
+        "description_short": "CHOCOLATE,"
+      },
+      {
+        "store_id": 9,
+        "description": "COFFEE",
+        "price": 3.3249884020618556,
+        "store_label": "Store 9",
+        "description_short": "COFFEE"
+      },
+      {
+        "store_id": 9,
+        "description": "CONDIMENTS",
+        "price": 2.430783647969578,
+        "store_label": "Store 9",
+        "description_short": "CONDIMENTS"
+      },
+      {
+        "store_id": 9,
+        "description": "CRISPS, POTATO",
+        "price": 2.1946514957425967,
+        "store_label": "Store 9",
+        "description_short": "CRISPS, POTATO"
+      },
+      {
+        "store_id": 9,
+        "description": "PRE-COOKED DISHES BASED ON MEAT, FISH, VEGETABLES, PASTA OR OTHER CEREALS, CHILLED OR FROZEN",
+        "price": 3.3450679262634284,
+        "store_label": "Store 9",
+        "description_short": "PRE-COOKED"
+      },
+      {
+        "store_id": 9,
+        "description": "SPICES AND CULINARY HERBS (EXCL. SEEDS)",
+        "price": 1.5624188183114207,
+        "store_label": "Store 9",
+        "description_short": "SPICES"
+      },
+      {
+        "store_id": 9,
+        "description": "WINE, RED",
+        "price": 7.696014783866303,
+        "store_label": "Store 9",
+        "description_short": "WINE, RED"
+      },
+      {
+        "store_id": 9,
+        "description": "WINE, WHITE",
+        "price": 7.580017102787754,
+        "store_label": "Store 9",
+        "description_short": "WINE, WHITE"
+      },
+      {
+        "store_id": 9,
+        "description": "YOGHURT, FROM MILK OF COWS",
+        "price": 1.8107060036073177,
+        "store_label": "Store 9",
+        "description_short": "YOGHURT, FROM MILK OF COWS"
+      }
+    ]
+  }
+}

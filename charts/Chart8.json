@@ -6,14 +6,14 @@
       "Geographical clustering of states based on health system indicators"
     ],
     "fontSize": 18,
-    "subtitleFontSize": 11,
+    "subtitleFontSize": 12,
     "subtitleFontStyle": "italic",
     "offset": 20
   },
   "width": 700,
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/main/Admin_Boundary.json",
+    "url": "https://raw.githubusercontent.com/nethranatarajan3/nethranatarajan3.github.io/main/data/Admin_Boundary.json",
     "format": {"type": "json", "property": "features"}
   },
   "transform": [

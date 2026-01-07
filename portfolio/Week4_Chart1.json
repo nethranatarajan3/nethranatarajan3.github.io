@@ -33,14 +33,14 @@
       {
         "Year": 1990,
         "Length": 33,
-        "Growth": 4.4,
+        "Growth": 4.2,
         "TimeLabel": "1990-91",
         "Series": "Total Length [in '000kms] Left axis"
       },
       {
         "Year": 2000,
         "Length": 57.737,
-        "Growth": 82.3,
+        "Growth": 75.0,
         "TimeLabel": "2000-01",
         "Series": "Total Length [in '000kms] Left axis"
       },
